@@ -8,9 +8,18 @@ from cloak import Cloak
 from ring import Ring
 
 def main():
+    monsters = {
+        ['Spiked Dragon', 0, 6]
+        ['Orc Warlord', 1, 5]
+        ['Shadow Knight', 2, 4]
+        ['Lava Monster', 3, 3]
+        ['Fiendish Ghoul', 4, 2]
+        ['Goblin Mage', 5, 1]
+        ['Dark Magician', 6, 0]
+    }
+    
 
-
-    pass
+    
 
 
 
