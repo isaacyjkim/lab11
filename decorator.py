@@ -14,4 +14,4 @@ class Decorator(Character):
         return self._char.strength()
     
     def __str__(self):
-        return self._char.__str__()
+        return super().__str__()

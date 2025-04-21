@@ -19,5 +19,5 @@ class Character(abc.ABC):
 
     def __str__(self): 
         """Returns a string representation of the character description, magic resistance and strength."""
-        return f"{self.description()} Magic Resistance: {self.magic_resistance()} Strength: {self.strength()}"
+        return f"{self.description()} \nMR: {self.magic_resistance()} \nSTR: {self.strength()}"
 

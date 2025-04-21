@@ -4,7 +4,7 @@ class Bard(character.Character):
 
     def description(self): 
         """Returns a description of the bard."""
-        return "Yo ima bard. What's a bard? "
+        return "Barth the Bard "
     
     def magic_resistance(self): 
         """Returns the bard's magic resistance."""
@@ -13,3 +13,6 @@ class Bard(character.Character):
     def strength(self):
         """Returns the bard's attack power."""
         return 2 
+    
+    
+    
