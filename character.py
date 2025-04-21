@@ -13,11 +13,11 @@ class Character(abc.ABC):
         pass
 
     @abc.abstractmethod
-    def attack(self):
-        """Returns the character's attack power."""
+    def strength(self):
+        """Returns the character's strength power."""
         pass
 
     def __str__(self): 
         """Returns a string representation of the character description, magic resistance and strength."""
-        return f"{self.description()} Magic Resistance: {self.magic_resistance()} Attack power: {self.attack()}"
+        return f"{self.description()} Magic Resistance: {self.magic_resistance()} Strength: {self.strength()}"
 
