@@ -6,6 +6,7 @@ from decorator import Decorator
 from shield import Shield
 from cloak import Cloak
 from ring import Ring
+import check_input 
 
 def main():
     monsters = {
@@ -21,6 +22,16 @@ def main():
 
     
 
+    print("Character Maker! ")
+    print("Choose a starting character:\n1. Bard\n2. Warrior\n3. Wizard")
+    character_choice = check_input.check_input("> ", 1, 3) 
+    if character_choice == 1:
+        character = Bard()
+    elif character_choice == 2:
+        character = Warrior()
+    else:
+        character = Wizard()
 
+    print(character)
 
 main()
