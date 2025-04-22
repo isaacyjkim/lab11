@@ -2,6 +2,8 @@ import character
 
 class Bard(character.Character): 
 
+    """Concrete class representing a bard character."""
+
     def description(self): 
         """Returns a description of the bard."""
         return "Barth the Bard "
