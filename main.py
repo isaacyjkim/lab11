@@ -10,6 +10,10 @@ import check_input
 import random
 
 def main():
+    """
+    Enemy creator. First column is the name, second represents its magic resistance, 
+    and the third represents its strength.
+    """
     monsters = [
         ['Spiked Dragon', 0, 6],
         ['Orc Warlord', 1, 5],
@@ -20,6 +24,7 @@ def main():
         ['Dark Magician', 6, 0],
     ]
 
+    
     print("Character Maker! ")
     print("Choose a starting character:\n1. Bard\n2. Warrior\n3. Wizard")
     character_choice = check_input.get_int_range("> ", 1, 3) 
@@ -31,6 +36,7 @@ def main():
         character = Wizard()
     print(character)
 
+    
     items=['Sturdy Shield', 'Magic Ring', 'Protective Cloak']
     for i in range(2):
         print(f'Choose {len(items)-1} items:')
@@ -49,6 +55,10 @@ def main():
 
     print('You must pass two of the following three trials!')
     trials = 0
+
+    # Main loop for trials
+    # Each trial consists of a random monster encounter
+    # The player can choose to battle or dodge
     for i in range(3):
         print(f'Trial {i+1} of 3:')
         monster = random.choice(monsters)
