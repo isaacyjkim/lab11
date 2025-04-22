@@ -2,9 +2,11 @@ import character
 
 class Warrior(character.Character):
 
+    """Concrete Class representing a warrior character."""
+
     def description(self):
         """Returns a description of the bard."""
-        return "Yo ima warrior. RAAAAAAhHHHHHHHHHHHHH!"
+        return "Harcor the Warrior"
     
     def magic_resistance(self):
         """Returns the bard's magic resistance."""
