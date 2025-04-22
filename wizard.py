@@ -2,9 +2,13 @@ import character
 
 class Wizard(character.Character):
 
+    """
+    Concrete class representing a wizard character.
+    """
+    
     def description(self):
         """Returns a description of the wizard."""
-        return "Yo ima wizard. zshsshshh woooo."
+        return "Altar the Wizard"
     
     def magic_resistance(self):
         """Returns the wizard's magic resistance."""
