@@ -5,7 +5,7 @@ Ring class that extends the Decorator class.
 class Ring(Decorator):
     def description(self):
         # Add the ring description to the base description
-        return 'Ringed' + super().description() 
+        return 'Ringed ' + super().description() 
     
     def magic_resistance(self):
         # Increase the magic resistance by 2

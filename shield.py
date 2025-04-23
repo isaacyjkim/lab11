@@ -6,7 +6,7 @@ class Shield(Decorator):
     """
     def description(self):
         # Add the shield description to the base description
-        return 'Shielded' + super().description() 
+        return 'Shielded ' + super().description() 
     
     def magic_resistance(self):
         # Increase the magic resistance by 0

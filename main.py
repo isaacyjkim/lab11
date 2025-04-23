@@ -55,6 +55,7 @@ def main():
 
     print('You must pass two of the following three trials!')
     trials = 0
+    fails = 0 
 
     # Main loop for trials
     # Each trial consists of a random monster encounter
@@ -68,17 +69,31 @@ def main():
         print('Fight:\n1. Battle\n2. Dodge')
         choice = check_input.get_int_range("> ", 1, 2)
         if choice == 1:
-            print(f'You battle with the {monster[0]} and easily defeat it.\n You have passed this trial')
-            trials+=1
+            if character.magic_resistance() >= monster[1] and character.strength() >= monster[2]:
+                print(f'You battle with the {monster[0]} and easily defeat it.\nYou have passed this trial')
+                trials+=1
+            else: 
+                print(f'You battle with the {monster[0]} and are too weak.\nYou have failed this trial')
+                fails+=1
         else:
-            print(f'You attempt to dodge the {monster[0]}, but it manage to hit you.\nYou have failed this trial.')
+            dodge = random.randint(1,4)
+            if dodge == 1:
+                print(f"You managed to dodge the {monster[0]} and pass the trial.")
+                trials+=1 
+            else:
+                print(f'You attempt to dodge the {monster[0]}, but it manage to hit you.\nYou have failed this trial.')
+                fails+=1
 
-    if trials == 2:
-        print('\nYou have passed the three trials...barely.')
-    elif trials == 3:
-        print('\nYou have successfully passed all trials.')
-    else:
-        print('\nYou have failed.')        
-    
+        
+        if fails == 2: 
+            print('\nYou have failed two trials. You have failed the trials. ')
+            break
+
+
+
+    if trials == 2: 
+        print("\nYou have passed the trials... barely") 
+    elif trials == 3: 
+        print("\nYou have passed all 3 trials! ")
 
 main()
