@@ -91,6 +91,8 @@ def main():
 
 
 
+    # if the player has passed at least 2 trials, they win
+
     if trials == 2: 
         print("\nYou have passed the trials... barely") 
     elif trials == 3: 
