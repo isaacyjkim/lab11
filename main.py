@@ -24,7 +24,7 @@ def main():
         ['Dark Magician', 6, 0],
     ]
 
-    
+    # prompts player to choose a character
     print("Character Maker! ")
     print("Choose a starting character:\n1. Bard\n2. Warrior\n3. Wizard")
     character_choice = check_input.get_int_range("> ", 1, 3) 
@@ -36,7 +36,7 @@ def main():
         character = Wizard()
     print(character)
 
-    
+    # prompts player to choose two items and add their stats to the player character
     items=['Sturdy Shield', 'Magic Ring', 'Protective Cloak']
     for i in range(2):
         print(f'Choose {len(items)-1} items:')
