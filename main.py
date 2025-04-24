@@ -60,6 +60,7 @@ def main():
     # Main loop for trials
     # Each trial consists of a random monster encounter
     # The player can choose to battle or dodge
+    # If they fail two trials, they lose
     for i in range(3):
         print(f'Trial {i+1} of 3:')
         monster = random.choice(monsters)
@@ -68,6 +69,9 @@ def main():
         print(f'STR: {monster[2]}')
         print('Fight:\n1. Battle\n2. Dodge')
         choice = check_input.get_int_range("> ", 1, 2)
+
+        # If the player chooses to battle, check if they have enough magic resistance and strength
+        # If they do, they pass the trial
         if choice == 1:
             if character.magic_resistance() >= monster[1] and character.strength() >= monster[2]:
                 print(f'You battle with the {monster[0]} and easily defeat it.\nYou have passed this trial')
@@ -75,6 +79,9 @@ def main():
             else: 
                 print(f'You battle with the {monster[0]} and are too weak.\nYou have failed this trial')
                 fails+=1
+
+        # If the player chooses to dodge, randomly determine if they succeed or fail
+        # If they succeed, they pass the trial
         else:
             dodge = random.randint(1,4)
             if dodge == 1:
@@ -85,6 +92,7 @@ def main():
                 fails+=1
 
         
+        # If the player has failed two trials, they lose
         if fails == 2: 
             print('\nYou have failed two trials. You have failed the trials. ')
             break
